@@ -130,7 +130,7 @@ body {
 
 /* Toggle content styles */
 .toggle-content{
-    display: block !important;
+    display: block;
 }
 
 .highlight-content{
