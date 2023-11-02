@@ -24,80 +24,95 @@ html {
 
 body {
     margin: 0;
-    padding: 12rem 1.8rem 10rem 1.8rem;
+    padding: 12rem 1.8rem;
     height: 100vh;
     display: grid;
     align-items: center;
     background-image: linear-gradient(var(--softViolet), var(--softBlue));
     font-family: var(--kumbhSans);
     font-size: var(--fontSize);
+    font-weight: 400;
+    letter-spacing: 0;
 }
 
 .wrapper {
+    display: grid;
     background-color: var(--lightGrayishBlue);
     border-radius: 30px; 
-    padding: 2.6rem 1.8rem;
+    padding: 2.6rem 1.8rem 3.5rem 1.8rem;
+    gap: 5rem;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
+
 /* Illustration section */
-.illustration-section {
-    inset: 0 0 0 0;
-    height: 75px;
-}
-
-.illustration {
-    padding-block: 4.6rem 0;
+.illustration img {
+    padding-block: 4.8rem 0;
     position: absolute;
     inset: 0 0 0 0;
-}
-
-.bg-pattern {
-    position: absolute;
-    inset: 21.3% 0 0  0;
-    margin: auto;
-}
-
-.illustration svg {
-    display: block;
     margin: 0 auto;
     width: 265px;
 }
 
-.bg-pattern svg {
-    display: block;
+.bg-pattern img {
+    position: absolute;
+    inset: 20% 0 0  0;
     margin: 0 auto;
+    width: 265px;
 }
+
+.illustration-desktop,
+.bg-pattern-desktop,
+.illustration-box-desktop {
+    display: none;
+}
+
 
 /* FAQ section */
 .heading {
     font-size: 2rem;
-    padding-block: 0 0.5rem;
+    padding-block: 0.5rem;
     text-align: center;
+}
+
+.faq-row {
+    border-bottom: 1px solid var(--veryDarkGrayishBlue);
 }
 
 .title {
     position: relative;
-    border-bottom: 1px solid var(--veryDarkGrayishBlue );
-    padding-block: 0.2rem 1.2rem;
+    padding: 1rem 0;
+    margin: 0;
     color: var(--veryDarkGrayishBlue);
+    cursor: pointer;
+}
+
+.title-text {
+    padding-right: 1rem;
 }
 
 .arrow {
     position: absolute;
+    padding: 0.8rem 0;
     inset: 6% 0 0 0;
     margin: auto;
     text-align: right;
+    transition: 0.3s all;
     fill: var(--softRed);
 }
 
 .body-text {
     display: none;
+    font-size: 0.9rem;
+    color: var(--darkGrayishBlue);
+    padding-inline-end: 1rem;
+    margin-block-start: -4px;
 }
+
 
 /* Attribution section */
 .attribution { 
-    font-size: 11px; 
+    font-size: 12px; 
     padding-block: 3rem 0;
     text-align: center; 
     color: var(--lightGrayishBlue );
@@ -105,12 +120,25 @@ body {
 
 .attribution a { 
     text-decoration: none;
-    color: var(--softRed); 
+    transition: 0.3s all;
 }
 
 .attribution a:hover {
-    cursor: pointer;
     color: var(--lightGrayishBlue);
+}
+
+
+/* Toggle content styles */
+.toggle-content{
+    display: block !important;
+}
+
+.highlight-content{
+    font-weight: 600;
+}
+
+.rotate-arrow {
+    transform: rotateX(180deg);
 }
 
 
@@ -118,19 +146,68 @@ body {
 @media(min-width: 860px){
     .wrapper {
         margin: 0 auto;
-        display: grid;
+        position: relative;
         grid-template-columns: repeat(2, 1fr);
         padding-inline: 4rem;
         width: 800px;
         padding-bottom: 3.8rem;
     }
 
-    .heading {
-        text-align: left;
-    }
+    .illustration-desktop,
+    .bg-pattern-desktop,
+    .illustration-box-desktop {
+    display: block;
+}
 
     .illustration, 
     .bg-pattern {
         display: none;
+    }
+
+    .illustration-box-desktop img {
+        z-index: 2;
+        position: absolute;
+        inset: 0;
+        margin: auto 0 120px -100px;
+    }
+
+    .illustration-desktop img {
+        position: absolute;
+        inset: 0;
+        margin: auto 0 auto -80px;
+        width: 52%;
+        z-index: 1;
+    }
+
+    .bg-pattern-desktop img {
+        position: absolute;
+        inset: 0;
+        margin: -200px 0 auto -465px;
+        width: 100%;
+    }
+
+    .heading {
+        text-align: left;
+    }
+
+}
+
+@media(min-width: 1000px){
+    .wrapper {
+        width: 960px;
+    }
+
+    .illustration-box-desktop img {
+        z-index: 2;
+        position: absolute;
+        inset: 0;
+        margin: auto 0 105px -90px;
+    }
+
+    .bg-pattern-desktop img {
+        position: absolute;
+        inset: 0 0 0 0;
+        margin: -300px 0 auto -540px;
+        width: 100%;
     }
 }
