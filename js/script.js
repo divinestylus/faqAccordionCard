@@ -12,7 +12,6 @@ function toggleContent(title, content, arrow){
     title.classList.toggle('highlight-content');
     content.classList.toggle('toggle-content');
     arrow.classList.toggle('rotate-arrow');
-
 }
 
 
