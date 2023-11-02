@@ -121,6 +121,7 @@ body {
 .attribution a { 
     text-decoration: none;
     transition: 0.3s all;
+    color: var(--darkDesaturatedBlue);
 }
 
 .attribution a:hover {
