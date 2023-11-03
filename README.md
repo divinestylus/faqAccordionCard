@@ -1,6 +1,6 @@
 # Frontend Mentor - FAQ accordion card
 
-![Design preview for the FAQ accordion card coding challenge](./images/page-view.)
+![Design preview for the FAQ accordion card coding challenge](./images/page-view.png)
 
 ## Welcome! 👋
 
