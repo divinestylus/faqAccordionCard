@@ -85,6 +85,11 @@ body {
     margin: 0;
     color: var(--veryDarkGrayishBlue);
     cursor: pointer;
+    transition: 0.3s all;
+}
+
+.title:hover {
+    color: var(--softRed);
 }
 
 .title-text {
