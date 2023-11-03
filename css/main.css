@@ -97,6 +97,7 @@ body {
     inset: 6% 0 0 0;
     margin: auto;
     text-align: right;
+    height: 110%;
     transition: 0.3s all;
     fill: var(--softRed);
 }
