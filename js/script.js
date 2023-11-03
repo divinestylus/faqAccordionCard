@@ -1,4 +1,4 @@
-/** Global constants */
+/** Global constant */
 const QUESTION_ROW = document.querySelectorAll('.title');
 
 
@@ -18,6 +18,7 @@ function toggleContent(title, content, arrow){
 /** Listeners section */
 QUESTION_ROW.forEach(row => {
     row.addEventListener('click', event => {
+        console.log(event.target)
         let title = event.target.parentElement,
             content = event.target.parentElement.nextElementSibling,
             arrow =  event.target.parentElement.children[1];
