@@ -26,7 +26,6 @@ html {
 body {
     margin: 0;
     padding: 12rem 1.8rem;
-    height: 100vh;
     display: grid;
     align-items: center;
     background-image: linear-gradient(var(--softViolet), var(--softBlue));
