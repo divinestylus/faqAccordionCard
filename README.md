@@ -1,5 +1,5 @@
 # FAQ accordion card (Frontend Mentor)
-## Challenge 002
+## Challenge #002
 
 ![Design preview for the FAQ accordion card coding challenge](./images/page-view.png)
 
