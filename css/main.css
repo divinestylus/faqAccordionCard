@@ -28,6 +28,7 @@ body {
     padding: 12rem 1.8rem;
     display: grid;
     align-items: center;
+    min-height: 100vh;
     background-image: linear-gradient(var(--softViolet), var(--softBlue));
     font-family: var(--kumbhSans);
     font-size: var(--fontSize);
