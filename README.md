@@ -11,8 +11,6 @@ This is a solution to the [Frontend Mentor](https://www.frontendmentor.io) This 
 - [The challenge](#the-challenge)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 
